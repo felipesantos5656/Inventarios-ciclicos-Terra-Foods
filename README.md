@@ -1,1 +1,0 @@
-# Inventarios-ciclicos-Terra-Foods
