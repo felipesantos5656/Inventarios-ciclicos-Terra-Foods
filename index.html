@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FELA RICE | Sabor que une</title>
+<meta name="description" content="FELA RICE - Arroz con pollo colombiano en Facatativá">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@400;700&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--a:#f4c542;--b:#e67e22;--c:#1d2b1f;--d:#f7f3e8}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:Poppins,sans-serif;background:var(--d);color:var(--c)}
+h1,h2,h3,.logo{font-family:'Baloo 2',cursive}
+#splash{position:fixed;inset:0;background:linear-gradient(135deg,var(--a),var(--b));display:flex;flex-direction:column;justify-content:center;align-items:center;z-index:9999;transition:1s}
+.hide{opacity:0;visibility:hidden}
+.chicken{font-size:8rem;animation:bounce 1s infinite}
+@keyframes bounce{50%{transform:translateY(-15px)}}
+header{position:sticky;top:0;background:rgba(29,43,31,.95);padding:1rem 8%;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:2.6rem;color:var(--a)}
+nav a{color:#fff;text-decoration:none;margin-left:20px;font-weight:600}
+.hero{min-height:100vh;background:linear-gradient(135deg,var(--a),var(--b));display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:2rem}
+.hero h1{font-size:clamp(3rem,8vw,6rem)}
+.hero p{max-width:700px;font-size:1.2rem;margin:20px 0}
+.btn{background:var(--c);color:white;padding:18px 35px;border-radius:18px;text-decoration:none;font-weight:700}
+.section{padding:6rem 8%}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:25px}
+.card{background:#fff;padding:2rem;border-radius:20px;box-shadow:0 10px 30px rgba(0,0,0,.08)}
+.order-form{max-width:700px;margin:auto;background:#fff;padding:2rem;border-radius:20px}
+input,select,textarea{width:100%;padding:15px;margin:10px 0;border:1px solid #ddd;border-radius:12px}
+button{width:100%;padding:15px;background:var(--b);color:white;border:none;border-radius:12px;font-weight:700}
+footer{background:var(--c);color:white;text-align:center;padding:2rem}
+</style>
+</head>
+<body>
+
+<div id="splash">
+<div class="chicken">🍗</div>
+<h1>FELA RICE</h1>
+<p>Sabor que une</p>
+</div>
+
+<header>
+<div class="logo">FELA RICE</div>
+<nav>
+<a href="#nosotros">Nosotros</a>
+<a href="#menu">Carta</a>
+<a href="#pedido">Pedidos</a>
+</nav>
+</header>
+
+<section class="hero">
+<h1>Sabor que une</h1>
+<p>Una propuesta gastronómica inspirada en la tradición colombiana, donde cada detalle comunica cercanía, autenticidad y calidez.</p>
+<a class="btn" href="#pedido">Ordenar ahora</a>
+</section>
+
+<section id="nosotros" class="section">
+<h2>Nuestra esencia</h2>
+<p>FELA RICE nace en Facatativá como una propuesta creada por Felipe, Edver, Luz y Alejandro. Nuestro nombre representa la unión de ideas, tradición y trabajo colaborativo para ofrecer una experiencia gastronómica auténtica y memorable.</p>
+</section>
+
+<section id="menu" class="section">
+<h2>Nuestra carta</h2>
+<div class="cards">
+<div class="card"><h3>Arroz con Pollo Tradicional</h3><p>La receta clásica colombiana con sazón casera.</p></div>
+<div class="card"><h3>Arroz con Pollo Paisa</h3><p>Acompañado de aguacate, hogao y maduro.</p></div>
+<div class="card"><h3>Arroz con Pollo Campesino</h3><p>Con vegetales frescos y preparación artesanal.</p></div>
+<div class="card"><h3>Limonada Natural</h3><p>Refrescante y preparada al instante.</p></div>
+<div class="card"><h3>Jugo Tropical</h3><p>Sabores colombianos frescos.</p></div>
+<div class="card"><h3>Acompañamientos</h3><p>Papas criollas, ensalada fresca y tajadas.</p></div>
+</div>
+</section>
+
+<section id="pedido" class="section">
+<h2>Realiza tu pedido</h2>
+<div class="order-form">
+<input placeholder="Nombre completo">
+<input placeholder="Teléfono">
+<select>
+<option>Arroz con Pollo Tradicional</option>
+<option>Arroz con Pollo Paisa</option>
+<option>Arroz con Pollo Campesino</option>
+<option>Limonada Natural</option>
+<option>Jugo Tropical</option>
+<option>Combo Completo FELA</option>
+</select>
+<textarea rows="4" placeholder="Dirección"></textarea>
+<button onclick="alert('Pedido enviado 🍗')">Confirmar pedido</button>
+</div>
+</section>
+
+<footer>FELA RICE © 2026 · Facatativá, Colombia</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded",function(){
+setTimeout(()=>document.getElementById("splash").classList.add("hide"),2200)
+})
+</script>
+
+</body>
+</html>
